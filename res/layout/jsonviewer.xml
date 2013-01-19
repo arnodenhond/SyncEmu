@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="okButtonClick"
+        android:text="Ok" />
+
+    <EditText
+        android:id="@+id/configinput"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:ems="10"
+        android:hint="paste i\'m cloud config JSON here" 
+        android:layout_above="@id/ok"
+        android:inputType="textMultiLine" >
+    </EditText>
+
+</RelativeLayout>
