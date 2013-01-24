@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
 /**
  * 
@@ -47,8 +48,9 @@ public class CloudEmu extends Activity implements OnClickListener {
 		ok.setText("ok");
 		ok.setOnClickListener(this);
 		ll.addView(ok);
-		
-		setContentView(ll);
+		ScrollView sv = new ScrollView(this);
+		sv.addView(ll);
+		setContentView(sv);
 	}
 
 	@Override
@@ -80,7 +82,7 @@ public class CloudEmu extends Activity implements OnClickListener {
 				break;
 			default: configentry = new ConfigEntry(entry); 
 			}
-			configEntries.add(configentry);
+			configEntries.add(0,configentry);
 		}
 		return configEntries.toArray(new ConfigEntry[configEntries.size()]);
 	}
